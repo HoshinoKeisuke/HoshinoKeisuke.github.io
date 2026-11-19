@@ -83,7 +83,7 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
   color: var(--secondary-ink);
   font-size: 1.05rem;
 }
-nav { display: flex; gap: .35rem 1.35rem; align-items: baseline; flex-wrap: wrap; }
+nav { display: flex; gap: .35rem clamp(.75rem, 4vw, 1.35rem); align-items: baseline; flex-wrap: wrap; }
 nav a { padding-block: .18rem; }
 .masthead {
   padding-top: clamp(1.8rem, 6vh, 3.8rem);
