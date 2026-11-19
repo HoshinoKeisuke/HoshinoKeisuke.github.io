@@ -51,7 +51,8 @@ def check_site(root, works):
         base = f"{BASE}/{file.relative_to(root).as_posix()}"
         for link in page.links:
             absolute = urlsplit(urljoin(base, link))
-            if absolute.netloc != hostname:
+            # The CV repository publishes its own Pages project under this prefix.
+            if absolute.netloc != hostname or absolute.path.startswith("/CV/"):
                 continue
             target = root / unquote(absolute.path).lstrip("/")
             if target.is_dir():

@@ -34,7 +34,7 @@ def screenshots(output):
                 "cmd": "Emulation.setDeviceMetricsOverride",
                 "params": {"width": width, "height": height, "deviceScaleFactor": 1, "mobile": False},
             })
-            for path in ("/", "/papers/", "/talks/"):
+            for path in ("/", "/profile/", "/papers/", "/talks/"):
                 driver("POST", session + "/url", {"url": "http://127.0.0.1:8000" + path})
                 state = driver("POST", session + "/execute/async", {"args": [], "script": """
                     const done = arguments[arguments.length - 1];

@@ -15,7 +15,6 @@ from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://hoshinokeisuke.github.io"
-CV = "https://raw.githubusercontent.com/HoshinoKeisuke/CV/pdf/main.pdf"
 SECTIONS = {"paper": "Papers", "talk": "Talks", "note": "Notes"}
 JSON_PATH = "/data/works.json"
 
@@ -54,13 +53,13 @@ def profile_blocks():
 
 def navigation(active, path="/"):
     links = []
-    for title in SECTIONS.values():
+    for title in ("Profile", *SECTIONS.values()):
         target = f"/{title.lower()}/"
+        label = "Full profile" if path == "/" and title == "Profile" else title
         current = ""
         if active == title:
             current = ' aria-current="page"' if target == path else ' aria-current="location"'
-        links.append(anchor(title, target, current))
-    links.append(anchor("CV", CV, ' type="application/pdf"'))
+        links.append(anchor(label, target, current))
     return '<nav aria-label="Main">' + " ".join(links) + "</nav>"
 
 
@@ -102,7 +101,7 @@ def home(intro, email):
 <h1>Keisuke Hoshino <span lang="ja">星野 恵佑</span></h1>
 <div class="intro">{intro}</div>
 {navigation(None)}
-<p class="home-contact"><span>{escape(email)}</span>{anchor("Profile", "/profile/")}</p>
+<p class="home-contact">{escape(email)}</p>
 </main>"""
 
 
@@ -251,7 +250,7 @@ def render(works, output_dir):
            "Research Institute for Mathematical Sciences, Kyoto University.")
     page("/", "Keisuke Hoshino", bio, home(blocks[0], email))
     page("/profile/", "Profile", bio, '<main id="main" class="page"><h1>Profile</h1>'
-         f'<div class="prose">{"".join(blocks)}</div></main>')
+         f'<div class="prose">{"".join(blocks)}</div></main>', "Profile")
     for kind, section in SECTIONS.items():
         items = sorted((w for w in works if w["type"] == kind), key=lambda w: w.get("date") or "", reverse=True)
         if kind == "note":

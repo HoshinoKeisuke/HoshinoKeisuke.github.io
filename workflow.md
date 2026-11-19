@@ -6,13 +6,14 @@
 
 - 公開先は既存の GitHub Pages。従来の URL とリポジトリの履歴を引き継ぎ、`main` の更新時に GitHub Actions が `_site/` の静的ファイルを公開する。[公開サイト](https://hoshinokeisuke.github.io/)・[リポジトリ](https://github.com/HoshinoKeisuke/HoshinoKeisuke.github.io)
 - 自己紹介とノートの原稿はサイトのリポジトリで Markdown として管理する。今の Profile・Papers・Talks・Notes 用 Google Docs は最初の移行元とする。移行後の編集は Git で行い、すでに公開しているスライドや PDF は既存の URL を利用する。[現在の Google Sites](https://sites.google.com/view/keisuke-hoshino/)
-- 論文と講演の書誌情報は CV の `bibliography.bib` を正本とする。サイト側には参照する CV のコミットと、資料リンクや関連する業績などウェブ用の補足を持つ。CV は既存の仕組みで PDF を生成し、サイトからその PDF にリンクする。[書誌データ](https://github.com/HoshinoKeisuke/CV/blob/main/bibliography.bib)・[CV の生成処理](https://github.com/HoshinoKeisuke/CV/blob/main/.github/workflows/latex.yml)
+- 論文と講演の書誌情報は CV の `bibliography.bib` を正本とする。サイト側には参照する CV のコミットと、資料リンクや関連する業績などウェブ用の補足を持つ。CV のコンパイルに成功すると、CV リポジトリの GitHub Pages が生成済みの PDF を同じ URL で公開する。[書誌データ](https://github.com/HoshinoKeisuke/CV/blob/main/bibliography.bib)・[CV の公開処理](https://github.com/HoshinoKeisuke/CV/blob/main/.github/workflows/pages.yml)
 
 ## 画面に出すもの
 
 | 場所 | 読めるもの |
 | --- | --- |
-| トップ | 星野 恵佑 / Keisuke Hoshino、所属、短い研究紹介と連絡先。Papers・Talks・Notes・CV を短い文字リンクで並べる。 |
+| トップ | 星野 恵佑 / Keisuke Hoshino、所属、短い研究紹介と連絡先。Full profile から詳しいプロフィールへ進める。Papers・Talks・Notes にも直接リンクする。 |
+| Profile | 研究関心、博士論文、連絡先。CV はプロフィール内の小さなリンクからブラウザで読める。 |
 | Papers | 原題、著者、掲載誌と年。題名から個別ページへ進める。DOI・arXiv は短いリンクにする。 |
 | Talks | 原題、会合名、開催日。資料のある講演には題目のそばに Slides を置き、一覧から直接開けるようにする。 |
 | Notes | 題名と資料へのリンク。内容や言語の補足が役立つ場合だけ一行添える。 |
@@ -20,7 +21,7 @@
 
 英語を基本にし、氏名は日英併記、論文・講演は原題を保つ。一覧では題名自体を普通のリンクにする。「詳細を開く」という別の操作を足さず、キーボードで選んだときにはリンクの位置が分かるようにする。
 
-初版は福尾匠さんのサイトのグレー（`#B5BCBA`）に黒い文字を組む。印刷時の背景は白。書体は欧文 EB Garamond、和文しっぽり明朝で、両方をサイトから配信する。公開時のホーム・論文・講演の画面は、Actions の `homepage-preview` から PNG でも確認できる。[千葉雅也さんのサイト](https://masayachiba.jp/)・[福尾匠さんのサイト](https://tfukuo.com/)・[平田賢吾さんのサイト](https://kengohirata.github.io/khirata/)
+初版は福尾匠さんのサイトのグレー（`#B5BCBA`）に黒い文字を組む。印刷時の背景は白。書体は欧文 EB Garamond、和文しっぽり明朝で、両方をサイトから配信する。公開時のホーム・プロフィール・論文・講演の画面は、Actions の `homepage-preview` から PNG でも確認できる。[千葉雅也さんのサイト](https://masayachiba.jp/)・[福尾匠さんのサイト](https://tfukuo.com/)・[平田賢吾さんのサイト](https://kengohirata.github.io/khirata/)
 
 ## 機械から読めるもの
 
