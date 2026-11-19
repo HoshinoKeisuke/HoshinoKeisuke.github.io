@@ -1,0 +1,96 @@
+{
+  "MR4835393": {
+    "language": "en",
+    "arxiv": "2303.14907"
+  },
+  "MR4875706": {
+    "language": "en",
+    "arxiv": "2310.19428",
+    "related": ["vdbl", "austms"]
+  },
+  "MR4947960": {
+    "language": "en",
+    "arxiv": "2406.13240"
+  },
+  "fujii2025omegaequifibrationsstrictweakomegacategories": {
+    "language": "en"
+  },
+  "sanada2026programmingbackpropagationreversehandlers": {
+    "language": "en",
+    "arxiv": "2602.18090",
+    "article_number": "306"
+  },
+  "SanadaHiraiHoshinoKatsumata2025": {
+    "peer_reviewed": false
+  },
+  "categories-in-tokyo-3": {
+    "language": "ja",
+    "links": {
+      "slides": "https://cit3rd-slides.hoshinokeisuke.workers.dev/"
+    }
+  },
+  "categoriesintokyo2026": {
+    "language": "ja",
+    "links": {
+      "event": "https://categories.tokyo/meetings/2.html",
+      "slides": "https://drive.google.com/file/d/1WrJ8DU8OVqiww_JMJN12AZfT-hr6Ho0y/view"
+    }
+  },
+  "cscat2026": {
+    "location": "AOSSA, Fukui",
+    "links": {
+      "event": "https://www.kurims.kyoto-u.ac.jp/~tsanada/event/cscat2026.html",
+      "slides": "https://drive.google.com/file/d/1YeKJ-w4BSDAJ4vADp3J4Bv5cQSJ3QqM1/view"
+    }
+  },
+  "cscat2025": {
+    "location": "Sojo University, Kumamoto",
+    "links": {
+      "event": "https://hisashi-aratake.gitlab.io/event/cscat2025",
+      "slides": "https://drive.google.com/file/d/19AAUyAAC-nQuoVsYVaAJeA7g3ucQPiwp/view"
+    }
+  },
+  "csts2024": {
+    "links": {
+      "event": "https://niccoloveltri.github.io/tsem24/",
+      "slides": "https://drive.google.com/file/d/1CnypEbwMiUB2dUexKHQv_s-8H3Kjjftj/view"
+    }
+  },
+  "vdbl": {
+    "updated": "2026-11-19",
+    "speakers": ["Keisuke Hoshino"],
+    "program_date": "2024-10-29",
+    "links": {
+      "event": "https://bryceclarke.github.io/virtual-double-categories-workshop/2024/index.html#keisuke-hoshino",
+      "slides": "https://drive.google.com/file/d/1SLZqQSsjD_eDNUYHfHE_2e8AWO4eTXZe/view",
+      "video": "https://www.youtube.com/watch?v=rJJM3xRooMs"
+    }
+  },
+  "austms": {
+    "updated": "2026-11-19",
+    "location": "University of Queensland, Brisbane",
+    "links": {
+      "event": "https://austms.org.au/event/austms-2023/",
+      "slides": "https://drive.google.com/file/d/1uUjnf-qEGmpY7p7fc94px-8Bj9GTV0wx/view"
+    }
+  },
+  "australiancategoryseminar2023": {
+    "updated": "2026-11-19",
+    "links": {
+      "event": "https://centre-of-australian-category-theory.github.io/seminar/",
+      "slides": "https://drive.google.com/file/d/17Qz17Sncwve5vlPpUrGq8HtB79VQgxG6/view"
+    }
+  },
+  "cscat2023": {
+    "links": {
+      "event": "https://sites.google.com/view/cscat2023/home"
+    }
+  },
+  "cscat2022": {
+    "updated": "2026-11-19",
+    "links": {
+      "event": "https://sites.google.com/view/cscat2022",
+      "slides": "https://drive.google.com/file/d/13he8X-Xl6ln_zITWELgdyAqGIz9tVuw7/view"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+name: Publish homepage
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build and check the static site
+        run: python3 scripts/build.py
+      - name: Check desktop and phone layouts
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 --directory _site > "$RUNNER_TEMP/preview-server.log" 2>&1 &
+          chromedriver --port=9515 > "$RUNNER_TEMP/preview-browser.log" 2>&1 &
+          python3 scripts/check_layout.py "$RUNNER_TEMP/homepage-preview"
+      - uses: actions/upload-artifact@v6
+        with:
+          name: homepage-preview
+          path: ${{ runner.temp }}/homepage-preview/
+          retention-days: 3
+      - uses: actions/upload-pages-artifact@v5
+        if: github.ref == 'refs/heads/main'
+        with:
+          path: _site
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish
+        id: deployment
+        uses: actions/deploy-pages@v5

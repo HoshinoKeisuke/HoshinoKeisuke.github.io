@@ -4,7 +4,7 @@
 
 ## 公開先と原稿
 
-- 公開先は既存の GitHub Pages を使う。2026-11-19 に確認した時点では、公開元は `main` のルートで、トップには Google Sites へのリンクが一つある。このディレクトリで既存リポジトリの履歴を引き継ぐ。[公開サイト](https://hoshinokeisuke.github.io/)・[リポジトリ](https://github.com/HoshinoKeisuke/HoshinoKeisuke.github.io)
+- 公開先は既存の GitHub Pages。従来の URL とリポジトリの履歴を引き継ぎ、`main` の更新時に GitHub Actions が `_site/` の静的ファイルを公開する。[公開サイト](https://hoshinokeisuke.github.io/)・[リポジトリ](https://github.com/HoshinoKeisuke/HoshinoKeisuke.github.io)
 - 自己紹介とノートの原稿はサイトのリポジトリで Markdown として管理する。今の Profile・Papers・Talks・Notes 用 Google Docs は最初の移行元とする。移行後の編集は Git で行い、すでに公開しているスライドや PDF は既存の URL を利用する。[現在の Google Sites](https://sites.google.com/view/keisuke-hoshino/)
 - 論文と講演の書誌情報は CV の `bibliography.bib` を正本とする。サイト側には参照する CV のコミットと、資料リンクや関連する業績などウェブ用の補足を持つ。CV は既存の仕組みで PDF を生成し、サイトからその PDF にリンクする。[書誌データ](https://github.com/HoshinoKeisuke/CV/blob/main/bibliography.bib)・[CV の生成処理](https://github.com/HoshinoKeisuke/CV/blob/main/.github/workflows/latex.yml)
 
@@ -20,11 +20,11 @@
 
 英語を基本にし、氏名は日英併記、論文・講演は原題を保つ。一覧では題名自体を普通のリンクにする。「詳細を開く」という別の操作を足さず、キーボードで選んだときにはリンクの位置が分かるようにする。
 
-背景の候補は真っ白（`#FFFFFF`）と福尾匠さんのサイトのグレー（`#B5BCBA`）。黒い文字で実際の氏名・和文の講演題目・長い英文の論文題目を組み、スマートフォン幅でも読んでから選ぶ。欧文 EB Garamond と和文しっぽり明朝は最初の比較候補。Neovim からも確認できるよう、デザイン案はローカルで開ける HTML または PNG でも見る。[千葉雅也さんのサイト](https://masayachiba.jp/)・[福尾匠さんのサイト](https://tfukuo.com/)・[平田賢吾さんのサイト](https://kengohirata.github.io/khirata/)
+初版は福尾匠さんのサイトのグレー（`#B5BCBA`）に黒い文字を組む。印刷時の背景は白。書体は欧文 EB Garamond、和文しっぽり明朝で、両方をサイトから配信する。公開時のホーム・論文・講演の画面は、Actions の `homepage-preview` から PNG でも確認できる。[千葉雅也さんのサイト](https://masayachiba.jp/)・[福尾匠さんのサイト](https://tfukuo.com/)・[平田賢吾さんのサイト](https://kengohirata.github.io/khirata/)
 
 ## 機械から読めるもの
 
-同じ記録から、本文を含む静的 HTML と公開用の JSON 一覧（案は `/data/works.json`）を生成する。各一覧の HTML に JSON の場所を記し、検索・調査ツールが JavaScript を実行せずに題名、資料、更新日をたどれるようにする。河瀬悠人さんのサイトで参考にしたのは、論文・講演にキーを持たせ、資料の追加を講演日と別に記録する点。[河瀬さんのデータ構成](https://github.com/ykawase5048/ykawase5048.github.io#コンテンツの編集)・[公開されている更新記録](https://ykawase5048.github.io/databases/updates.json)
+同じ記録から、本文を含む静的 HTML と公開用の JSON 一覧（`/data/works.json`）を生成する。各一覧の HTML に JSON の場所を記し、検索・調査ツールが JavaScript を実行せずに題名、資料、更新日をたどれるようにする。河瀬悠人さんのサイトで参考にしたのは、論文・講演にキーを持たせ、資料の追加を講演日と別に記録する点。[河瀬さんのデータ構成](https://github.com/ykawase5048/ykawase5048.github.io#コンテンツの編集)・[公開されている更新記録](https://ykawase5048.github.io/databases/updates.json)
 
 - **識別と関係**　各項目に安定した ID と URL を付ける。CV にあるものは既存の BibTeX キーに対応づけ、同題の論文と講演も別の記録にする。たとえば論文 `MR4875706` と講演 `austms` は、題名の一致に頼らずキーで関連づけられる。
 - **内容と出典**　種別、原題、著者・講演者、掲載誌・会合、出版状況、判明している言語と日付を収める。DOI、arXiv、スライド、動画、関連項目は種類を区別してリンクする。
@@ -36,6 +36,24 @@
 2. 著者・掲載誌・DOI や新しい講演は CV の BibTeX に一度記入する。CV に反映したコミットをサイト側でも指定する。スライド追加だけならサイト側に URL を記入する。どちらの場合も、公開内容が変わる項目の `updated` を記録する。
 3. 同じ入力から HTML と JSON を生成する。対象項目の表示、公開 JSON の値、資料リンクを確認する。既存項目の URL が変わっていないこと、無関係な項目の日付が動いていないことも差分で分かるようにする。
 4. プレビューを確認してから公開する。CV とサイトは別リポジトリなので、CV を変更したときは**サイト側の参照更新と再生成まで**を一回の更新作業に含める。
+
+### 編集箇所とコマンド
+
+自己紹介は `site/profile.md`、ノートは `data/notes/*.md` を編集する。論文と講演の資料リンク、関連項目、`updated` は `data/details.json` の対象キーに記入する。たとえば講演の資料リンクは `links.slides`。サイト全体は Python 3.11 以降の標準ライブラリでビルドできる。
+
+```sh
+python3 scripts/build.py
+python3 -m http.server 8000 --bind 127.0.0.1 --directory _site
+```
+
+ブラウザで `http://127.0.0.1:8000/` を開く。ビルド時に全項目の HTML・JSON・内部リンクを検証する。書誌情報を更新したときだけ、Git と Pandoc 3 を使って、CV の確定したコミットから `data/cv.json` を再作成してからビルドする。
+
+```sh
+cv_checkout=../CV/CVfujiiLike
+git -C "$cv_checkout" fetch https://github.com/HoshinoKeisuke/CV.git main
+python3 scripts/catalog_sync.py "$cv_checkout" FETCH_HEAD
+python3 scripts/build.py
+```
 
 ## 最初の移行
 

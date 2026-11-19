@@ -1,0 +1,428 @@
+{
+  "revision": "db6af5bede9cb957d3f0c342a6be38eb94260032",
+  "entries": [
+    {
+      "DOI": "10.21136/HS.2024.14",
+      "ISSN": "2209-0606",
+      "author": [
+        {
+          "family": "Fujii",
+          "given": "Soichiro"
+        },
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        },
+        {
+          "family": "Maehara",
+          "given": "Yuki"
+        }
+      ],
+      "container-title": "High. Struct.",
+      "id": "MR4835393",
+      "issue": "2",
+      "issued": {
+        "date-parts": [
+          [
+            2024
+          ]
+        ]
+      },
+      "keyword": "published",
+      "page": "386-415",
+      "title": "Weakly invertible cells in a weak ω-category",
+      "type": "article-journal",
+      "volume": "8"
+    },
+    {
+      "DOI": "10.1007/s10485-025-09799-y",
+      "ISSN": "0927-2852,1572-9095",
+      "URL": "https://doi.org/10.1007/s10485-025-09799-y",
+      "author": [
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        },
+        {
+          "family": "Nasu",
+          "given": "Hayato"
+        }
+      ],
+      "container-title": "Appl. Categ. Structures",
+      "id": "MR4875706",
+      "issue": "2",
+      "issued": {
+        "date-parts": [
+          [
+            2025
+          ]
+        ]
+      },
+      "keyword": "published",
+      "page": "Paper No. 11, 70",
+      "title": "Double categories of relations relative to factorisation systems",
+      "type": "article-journal",
+      "volume": "33"
+    },
+    {
+      "DOI": "10.1016/j.aim.2025.110490",
+      "ISSN": "0001-8708,1090-2082",
+      "URL": "https://doi.org/10.1016/j.aim.2025.110490",
+      "author": [
+        {
+          "family": "Fujii",
+          "given": "Soichiro"
+        },
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        },
+        {
+          "family": "Maehara",
+          "given": "Yuki"
+        }
+      ],
+      "container-title": "Adv. Math.",
+      "id": "MR4947960",
+      "issued": {
+        "date-parts": [
+          [
+            2025
+          ]
+        ]
+      },
+      "keyword": "published",
+      "page": "Paper No. 110490",
+      "title": "ω-weak equivalences between weak ω-categories",
+      "type": "article-journal",
+      "volume": "480"
+    },
+    {
+      "URL": "https://arxiv.org/abs/2511.09849",
+      "author": [
+        {
+          "family": "Fujii",
+          "given": "Soichiro"
+        },
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        },
+        {
+          "family": "Maehara",
+          "given": "Yuki"
+        }
+      ],
+      "id": "fujii2025omegaequifibrationsstrictweakomegacategories",
+      "issued": {
+        "date-parts": [
+          [
+            2025
+          ]
+        ]
+      },
+      "keyword": "preprint",
+      "title": "ω-equifibrations between strict and weak ω-categories",
+      "type": ""
+    },
+    {
+      "DOI": "10.1145/3828704",
+      "URL": "https://doi.org/10.1145/3828704",
+      "author": [
+        {
+          "family": "Sanada",
+          "given": "Takahiro"
+        },
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        },
+        {
+          "family": "Hirai",
+          "given": "Kenshin"
+        },
+        {
+          "family": "Katsumata",
+          "given": "Shin-ya"
+        }
+      ],
+      "container-title": "Proc. ACM Program. Lang.",
+      "id": "sanada2026programmingbackpropagationreversehandlers",
+      "issue": "ICFP",
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            8
+          ]
+        ]
+      },
+      "keyword": "published",
+      "page": "921-949",
+      "title": "Programming Backpropagation with Reverse Handlers for Arrows",
+      "type": "article-journal",
+      "volume": "10"
+    },
+    {
+      "author": [
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        }
+      ],
+      "id": "cscat2022",
+      "issued": {
+        "date-parts": [
+          [
+            2022,
+            3
+          ]
+        ]
+      },
+      "keyword": "nr-talk",
+      "note": "Computer Science and Category Theory (CSCAT2022), Online",
+      "title": "PCAs as algebras over operads",
+      "type": ""
+    },
+    {
+      "author": [
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        }
+      ],
+      "id": "cscat2023",
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            3
+          ]
+        ]
+      },
+      "keyword": "nr-talk",
+      "note": "Computer Science and Category Theory (CSCAT2023), Kyoto, Japan",
+      "title": "Towards Structures of Higher Dimensional Categorical Structures",
+      "type": ""
+    },
+    {
+      "author": [
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        }
+      ],
+      "id": "cscat2025",
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            3,
+            10
+          ]
+        ]
+      },
+      "keyword": "nr-talk",
+      "note": "Computer Science and Category Theory (CSCAT2025), Kumamoto, Japan",
+      "title": "Bivirtual double categories and localisation of composing cells",
+      "type": ""
+    },
+    {
+      "author": [
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        }
+      ],
+      "id": "cscat2026",
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            3,
+            17
+          ]
+        ]
+      },
+      "keyword": "nr-talk",
+      "note": "Computer Science and Category Theory (CSCAT2026), Fukui, Japan",
+      "title": "Strong subgenericity and the Structure-Semantics adjunction for T-operads",
+      "type": ""
+    },
+    {
+      "URL": "https://categories.tokyo/meetings/3.html#abstract-0-1000",
+      "author": [
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        }
+      ],
+      "id": "categories-in-tokyo-3",
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            11,
+            2
+          ]
+        ]
+      },
+      "keyword": "iv-talk",
+      "language": "ja-JP",
+      "note": "Categories in Tokyo 3, Kabukiza Tower, Tokyo, Japan",
+      "title": "圏の二重圏、圏と二重圏 ——形式的圏論と図式",
+      "type": ""
+    },
+    {
+      "author": [
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        }
+      ],
+      "id": "categoriesintokyo2026",
+      "issued": {
+        "date-parts": [
+          [
+            2026,
+            2,
+            8
+          ]
+        ]
+      },
+      "keyword": "nr-talk",
+      "note": "Categories in Tokyo, National Institute of Informatics, Tokyo, Japan",
+      "title": "代数的入射性とcellular replacement comonad",
+      "type": ""
+    },
+    {
+      "author": [
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        }
+      ],
+      "id": "csts2024",
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            12,
+            12
+          ]
+        ]
+      },
+      "keyword": "nr-talk",
+      "note": "Computer Science Theory Seminar, Logic and Semantics Group in TTÜ, Tallinn, Estonia",
+      "title": "Factorisation systems and (virtual) equipments",
+      "type": ""
+    },
+    {
+      "author": [
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        },
+        {
+          "family": "Nasu",
+          "given": "Hayato"
+        }
+      ],
+      "id": "vdbl",
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            10,
+            30
+          ]
+        ]
+      },
+      "keyword": "iv-talk",
+      "note": "Second Virtual Workshop on Double Categories, Online",
+      "title": "Double categories of relations relative to factorisation systems",
+      "type": ""
+    },
+    {
+      "author": [
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        },
+        {
+          "family": "Nasu",
+          "given": "Hayato"
+        }
+      ],
+      "id": "austms",
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            12,
+            6
+          ]
+        ]
+      },
+      "keyword": "nr-talk",
+      "note": "67th Annual Meeting of the Australian Mathematical Society (AustMS 2023), Brisbane, Australia",
+      "title": "Double categories of relations relative to factorisation systems",
+      "type": ""
+    },
+    {
+      "author": [
+        {
+          "family": "Hoshino",
+          "given": "Keisuke"
+        }
+      ],
+      "id": "australiancategoryseminar2023",
+      "issued": {
+        "date-parts": [
+          [
+            2023,
+            11,
+            29
+          ]
+        ]
+      },
+      "keyword": "nr-talk",
+      "note": "Australian Category Seminar, Macquarie University, Sydney, Australia",
+      "title": "Factorisation systems and equipments",
+      "type": ""
+    },
+    {
+      "URL": "https://jssst.or.jp/files/user/taikai/2025/papers/1a-1-R.pdf",
+      "author": [
+        {
+          "literal": "眞田 嵩大"
+        },
+        {
+          "literal": "平井 謙信"
+        },
+        {
+          "literal": "星野 恵佑"
+        },
+        {
+          "literal": "勝股 審也"
+        }
+      ],
+      "container-title": "日本ソフトウェア科学会第42回大会（2025年度）講演論文集",
+      "id": "SanadaHiraiHoshinoKatsumata2025",
+      "issued": {
+        "date-parts": [
+          [
+            2025
+          ]
+        ]
+      },
+      "keyword": "published",
+      "language": "ja-JP",
+      "note": "査読なし論文（This is an unrefereed paper）",
+      "publisher": "日本ソフトウェア科学会",
+      "title": "逆微分圏に基づいたアローハンドラによるニューラルネットワークプログラミング言語に向けて: Towards a Neural Network Programming Language with Arrow Handlers Based on Reverse Differential Categories",
+      "title-short": "逆微分圏に基づいたアローハンドラによるニューラルネットワークプログラミング言語に向けて",
+      "type": "paper-conference"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+/_site/
+/.previews/
+/nvim.log
+__pycache__/
+.DS_Store
