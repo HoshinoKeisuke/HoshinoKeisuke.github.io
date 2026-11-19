@@ -61,7 +61,7 @@ def navigation(active, path="/"):
             current = ' aria-current="page"' if target == path else ' aria-current="location"'
         links.append(anchor(title, target, current))
     links.append(anchor("CV", CV, ' type="application/pdf"'))
-    return '<nav aria-label="Main">' + "".join(links) + "</nav>"
+    return '<nav aria-label="Main">' + " ".join(links) + "</nav>"
 
 
 def document(path, title, description, content, section=None, structured=None):
@@ -99,7 +99,7 @@ def document(path, title, description, content, section=None, structured=None):
 
 def home(intro, email):
     return f"""<main id="main" class="home">
-<h1>Keisuke Hoshino<span lang="ja">星野 恵佑</span></h1>
+<h1>Keisuke Hoshino <span lang="ja">星野 恵佑</span></h1>
 <div class="intro">{intro}</div>
 {navigation(None)}
 <p class="home-contact"><span>{escape(email)}</span>{anchor("Profile", "/profile/")}</p>
@@ -126,7 +126,7 @@ def lang_attr(title):
 def resources(links):
     if not links:
         return ""
-    return '<span class="item-links">' + "".join(anchor(link["label"], link["url"]) for link in links) + "</span>"
+    return '<span class="item-links">' + " ".join(anchor(link["label"], link["url"]) for link in links) + "</span>"
 
 
 def list_item(work):
@@ -147,7 +147,8 @@ def list_item(work):
         kinds = None
     links = resources([link for link in work["links"] if kinds is None or link["kind"].lower() in kinds])
     if venue or links:
-        entry += f'<p class="item-info">{venue}{links}</p>'
+        parts = [f"<span>{venue}</span>" if venue else "", links]
+        entry += '<p class="item-info">' + " ".join(filter(None, parts)) + '</p>'
     return f"<li>{title}{entry}</li>"
 
 
@@ -169,7 +170,10 @@ def citation(work):
     volume = work.get("volume", "")
     if work.get("issue"):
         volume += f'({work["issue"]})'
-    parts.extend([volume, work.get("pages")])
+    parts.append(volume)
+    if work.get("article_number"):
+        parts.append(f'Article {work["article_number"]}')
+    parts.append(work.get("pages"))
     return escape(", ".join(filter(None, parts)))
 
 
